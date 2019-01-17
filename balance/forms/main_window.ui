@@ -20,7 +20,7 @@
    <string>PyBalance</string>
   </property>
   <widget class="QWidget" name="central_widget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <widget class="QListWidget" name="list_widget">
       <property name="sizePolicy">
@@ -38,23 +38,80 @@
      </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="vertical_layout">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="balance_label">
+          <property name="text">
+           <string>Balance</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset theme="go-previous"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="text">
+           <string>Pick Month</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset theme="go-next"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
       <item>
        <widget class="QTableView" name="table_view"/>
-      </item>
-      <item>
-       <widget class="Line" name="line">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="balance_label">
-        <property name="text">
-         <string>Balance</string>
-        </property>
-       </widget>
       </item>
      </layout>
     </item>
@@ -126,7 +183,8 @@
   </widget>
   <action name="action_new_database">
    <property name="icon">
-    <iconset theme="window-new"/>
+    <iconset theme="window-new">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>New Database</string>
@@ -140,7 +198,8 @@
   </action>
   <action name="action_open_database">
    <property name="icon">
-    <iconset theme="window"/>
+    <iconset theme="window">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Open Database</string>
@@ -154,7 +213,8 @@
   </action>
   <action name="action_new_account">
    <property name="icon">
-    <iconset theme="document-new"/>
+    <iconset theme="document-new">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>New Account</string>
@@ -168,7 +228,8 @@
   </action>
   <action name="action_edit_account">
    <property name="icon">
-    <iconset theme="document-properties"/>
+    <iconset theme="document-properties">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Edit Account</string>
@@ -182,7 +243,8 @@
   </action>
   <action name="action_delete_account">
    <property name="icon">
-    <iconset theme="edit-delete"/>
+    <iconset theme="edit-delete">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Delete Account</string>
@@ -196,7 +258,8 @@
   </action>
   <action name="action_help">
    <property name="icon">
-    <iconset theme="help"/>
+    <iconset theme="help">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Help</string>
@@ -210,7 +273,8 @@
   </action>
   <action name="action_about">
    <property name="icon">
-    <iconset theme="help-about"/>
+    <iconset theme="help-about">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>About</string>
