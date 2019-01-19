@@ -23,7 +23,7 @@ class UILoader:
         :return: The QWidget created from the UI file
         """
 
-        ui_path = str(cls.path / f"{form}.ui")
+        ui_path = str(cls.path / f"forms/{form}.ui")
         ui_file = QFile(ui_path)
         ui_file.open(QFile.ReadOnly)
 

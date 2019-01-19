@@ -2,7 +2,7 @@ import sys
 
 from PySide2.QtWidgets import QApplication
 
-from balance.forms.loader import UILoader
+from balance.ui import UILoader
 
 app = QApplication(sys.argv)
 ui_loader = UILoader()
