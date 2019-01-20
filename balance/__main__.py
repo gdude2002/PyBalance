@@ -1,13 +1,11 @@
 import sys
 
-from PySide2.QtWidgets import QApplication
+from balance import app
+from balance.forms.impl.main_window import MainWindow
 
-from balance.ui import UILoader
 
-app = QApplication(sys.argv)
-ui_loader = UILoader()
-
-window = ui_loader.load("main_window")
-window.show()
+main_window = MainWindow()
+main_window.setup()
+main_window.show()
 
 sys.exit(app.exec_())

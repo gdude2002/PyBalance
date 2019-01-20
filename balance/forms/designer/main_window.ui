@@ -22,7 +22,7 @@
   <widget class="QWidget" name="central_widget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
-     <widget class="QListWidget" name="list_widget">
+     <widget class="QListWidget" name="account_switcher">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -34,13 +34,6 @@
         <width>188</width>
         <height>16777215</height>
        </size>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="Line" name="line">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
@@ -69,31 +62,32 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="date_label">
           <property name="text">
            <string>Date</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="button_previous_month">
           <property name="text">
            <string/>
           </property>
           <property name="icon">
-           <iconset theme="go-previous"/>
+           <iconset theme="go-previous">
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="button_pick_month">
           <property name="text">
            <string>Pick Month</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="button_next_month">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -104,20 +98,21 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset theme="go-next"/>
+           <iconset theme="go-next">
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
        </layout>
       </item>
       <item>
-       <widget class="QTableView" name="table_view"/>
+       <widget class="QTableView" name="transactions_table"/>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QToolBar" name="tool_bar">
+  <widget class="QToolBar" name="left_tool_bar">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
      <horstretch>0</horstretch>
@@ -192,9 +187,6 @@
    <property name="statusTip">
     <string>Create a new database for another set of accounts</string>
    </property>
-   <property name="whatsThis">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create a new database file for another set of accounts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
   </action>
   <action name="action_open_database">
    <property name="icon">
@@ -206,9 +198,6 @@
    </property>
    <property name="statusTip">
     <string>Open another database of accounts</string>
-   </property>
-   <property name="whatsThis">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open another database of accounts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </action>
   <action name="action_new_account">
@@ -222,9 +211,6 @@
    <property name="statusTip">
     <string>Create a new account</string>
    </property>
-   <property name="whatsThis">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create a new account in the current database&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
   </action>
   <action name="action_edit_account">
    <property name="icon">
@@ -236,9 +222,6 @@
    </property>
    <property name="statusTip">
     <string>Edit the currently selected account</string>
-   </property>
-   <property name="whatsThis">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edit the currently-selected account&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </action>
   <action name="action_delete_account">
@@ -252,9 +235,6 @@
    <property name="statusTip">
     <string>Delete the currently selected account</string>
    </property>
-   <property name="whatsThis">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delete the currently-selected account&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
   </action>
   <action name="action_help">
    <property name="icon">
@@ -266,6 +246,9 @@
    </property>
    <property name="toolTip">
     <string>Help</string>
+   </property>
+   <property name="statusTip">
+    <string>Show the help documentation</string>
    </property>
    <property name="shortcut">
     <string>F1</string>
@@ -281,6 +264,9 @@
    </property>
    <property name="toolTip">
     <string>About</string>
+   </property>
+   <property name="statusTip">
+    <string>Show information about this application</string>
    </property>
   </action>
  </widget>

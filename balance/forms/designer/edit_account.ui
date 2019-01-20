@@ -75,7 +75,7 @@
       <enum>QLayout::SetMaximumSize</enum>
      </property>
      <item>
-      <widget class="QPushButton" name="recalculatebutton">
+      <widget class="QPushButton" name="recalculate_button">
        <property name="text">
         <string>Recalculate Balance</string>
        </property>
