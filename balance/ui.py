@@ -1,7 +1,7 @@
 import os.path
 import pathlib
 
-from PySide2.QtCore import QFile
+from PySide2.QtCore import QFile, QResource
 from PySide2.QtGui import QIcon
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QWidget
@@ -34,9 +34,13 @@ class UILoader:
         return cls.loader.load(ui_file)
 
 
+QResource.registerResource(str(UILoader.path / "assets.rcc"))
+
 QIcon.setFallbackSearchPaths(  # Not all platforms know what an icon theme is
-    QIcon.fallbackSearchPaths() + [str(UILoader.path / "assets:fallback_icons")]
+    QIcon.fallbackSearchPaths() + [str(UILoader.path / "assets/fallback_icons")]
 )
+
+print(QIcon.fallbackSearchPaths())
 
 main_window: MainWindowStub = UILoader.load("main_window")
 
