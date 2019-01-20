@@ -35,7 +35,7 @@ class UILoader:
 
 
 QIcon.setFallbackSearchPaths(  # Not all platforms know what an icon theme is
-    QIcon.fallbackSearchPaths() + [str(UILoader.path / "assets/fallback_icons")]
+    QIcon.fallbackSearchPaths() + [str(UILoader.path / "assets:fallback_icons")]
 )
 
 main_window: MainWindowStub = UILoader.load("main_window")
