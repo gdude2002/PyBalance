@@ -34,10 +34,10 @@ class UILoader:
         return cls.loader.load(ui_file)
 
 
-QResource.registerResource(str(UILoader.path / "assets.rcc"))
+QResource.registerResource(str(UILoader.path / "assets/assets.rcc"))
 
 QIcon.setFallbackSearchPaths(  # Not all platforms know what an icon theme is
-    QIcon.fallbackSearchPaths() + [str(UILoader.path / "assets/fallback_icons")]
+    QIcon.fallbackSearchPaths() + [":fallback_icons"]
 )
 
 print(QIcon.fallbackSearchPaths())

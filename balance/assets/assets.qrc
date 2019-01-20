@@ -1,0 +1,13 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>fallback_icons/document-new.png</file>
+    <file>fallback_icons/document-properties.png</file>
+    <file>fallback_icons/edit-delete.png</file>
+    <file>fallback_icons/go-next.png</file>
+    <file>fallback_icons/go-previous.png</file>
+    <file>fallback_icons/help.png</file>
+    <file>fallback_icons/help-about.png</file>
+    <file>fallback_icons/window.png</file>
+    <file>fallback_icons/window-new.png</file>
+</qresource>
+</RCC>
